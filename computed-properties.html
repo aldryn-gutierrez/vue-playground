@@ -1,0 +1,49 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Vue Training</title>
+	</head>
+
+	<body>
+		
+		<h1>{{fullName}}</h1>
+
+		<input type="text" v-model="first" placeholder="First Name">
+		<input type="text" v-model="last" placeholder="Last Name">
+
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.24/vue.min.js"></script>
+
+		<script type="text/javascript">
+			new Vue({
+				el: 'body',
+
+				data: {
+					points: 30,
+					first: 'Aldryn',
+					last: 'Gutierrez',
+					// fullName: 'Aldryn Gutierrez',
+				},
+
+				// watch: {
+				// 	first: function(first) {
+				// 		this.fullName = this.first + ' ' + this.last;
+				// 	},
+				// 	last: function(last) {
+				// 		this.fullName = this.first + ' ' + this.last;
+				// 	}
+				// }
+
+				computed: {
+					fullName: function(){
+						return this.first + ' ' + this.last; 
+					}
+				}
+
+				
+			});
+		</script>
+
+	</body>
+
+</html>
